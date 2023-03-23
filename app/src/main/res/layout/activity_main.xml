@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/l"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 응답자 이름 정보-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="이름"/>
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <!-- 응답자 성별 정보-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text=" [ 성별 ] "/>
+    <ToggleButton
+        android:id="@+id/sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="성별 설정:  남자"
+        android:textOff="성별 설정:  여자"
+        android:backgroundTint="#A9A9F5"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <!-- 응답자 생일 정보-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text=" [ 생일 ] "/>
+    <Button
+        android:id="@+id/btn_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="입력"
+        android:backgroundTint="#2E64FE"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <!-- 응답자 학력 정보-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text=" [ 학력 ] "/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/elementryschool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="초졸"/>
+        <RadioButton
+            android:id="@+id/middleschool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="중졸"/>
+        <RadioButton
+            android:id="@+id/highschool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="고졸"/>
+        <RadioButton
+            android:id="@+id/university"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대졸"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <!-- 응답자 자식 정보-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text=" [ 질문에 성실히 임하고 있나요? ] "/>
+    <CheckBox
+        android:id="@+id/check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="네"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <!-- 응답자의 앱 평가-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text=" [ 설문지 어플 평가 ]"/>
+    <RatingBar
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="1.0"
+        android:stepSize="0.5"
+        android:progressTint="#00FFFF"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+    <!-- 제출 -->
+    <Button
+        android:id="@+id/response"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="제출"/>
+</LinearLayout>
