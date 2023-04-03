@@ -16,16 +16,10 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn_birth, response;
-    DatePicker Date;
-    EditText name;
-    ToggleButton sex;
-    RadioGroup r1;
+    Button btn_birth, response; DatePicker Date; EditText name;
+    ToggleButton sex; RadioGroup r1;
     RadioButton elementryschool, middleschool, highschool, university;
-    CheckBox check;
-    RatingBar rating;
-    TextView show;
-
+    CheckBox check; RatingBar rating; TextView show;
     // 받아온 데이터
     String nm, school, s;
     int year, month, day;
@@ -61,15 +55,13 @@ public class MainActivity extends AppCompatActivity {
                     Date.setVisibility(View.GONE);
                     btn_birth.setText("열기");
                 }
-
             }
         });
         response.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                boolean on = ((RadioButton) v).isChecked();
-                if((r1 == null) || (name.getText().length() == 0) || (Date.getMonth() == 0||Date.getYear() == 0||Date.getDayOfMonth() == 0)
-                        || (!check.isChecked()))
-                    Toast.makeText(MainActivity.this, "", Toast.LENGTH_SHORT).show();
+                if((r1.getCheckedRadioButtonId() == -1) || (!check.isChecked()))
+                    Toast.makeText(MainActivity.this,
+                            "아직 모든 항목에 응답하지 않았습니다", Toast.LENGTH_SHORT).show();
                 else{
                     // 데이터: 이름
                     nm = name.getText().toString();
@@ -89,14 +81,11 @@ public class MainActivity extends AppCompatActivity {
                     //데이터: 평점
                     rate =rating.getRating();
                     //데이터 출력
-                    show.setText("이름: " + nm + ", 성별: " + s + "\n" +
-                            "생일: " + year + "년 " + month + "월 " + day + "일\n" +
-                            "학력: " + school + " 평점: " + rate);
+                    show.setText("[설문 결과]\t\n\n이름: " + nm + "\t\n성별: " + s +
+                            "\t\n생일: " + year + "년 " + month + "월 " + day +
+                            "일\t\n학력: " + school + "\t\n평점: " + rate);
                 }
-
             }
-
         });
-
     }
 }

@@ -16,6 +16,8 @@
     <EditText
         android:layout_below="@+id/t1"
         android:id="@+id/name"
+        android:inputType="text"
+        android:hint="홍길동"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -45,21 +47,19 @@
         android:layout_height="wrap_content"
         android:text=" [ 생일 ] "
         android:textColor="#000000" />
-
-        <Button
-            android:id="@+id/btn_birth"
-            android:layout_below="@+id/t3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#2E64FE"
-            android:text="열기" />
-
-        <DatePicker
-            android:layout_toRightOf="@+id/btn_birth"
-            android:id="@+id/Date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone" />
+    <Button
+        android:id="@+id/btn_birth"
+        android:layout_below="@+id/t3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2E64FE"
+        android:text="열기" />
+    <DatePicker
+        android:layout_toRightOf="@+id/btn_birth"
+        android:id="@+id/Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
 
     <!-- 응답자 학력 정보-->
     <TextView
@@ -69,7 +69,6 @@
         android:layout_height="wrap_content"
         android:text=" [ 학력 ] "
         android:textColor="#000000" />
-
     <RadioGroup
         android:id="@+id/r1"
         android:layout_below="@+id/t4"
@@ -101,7 +100,7 @@
             android:text="대졸" />
     </RadioGroup>
 
-    <!-- 응답자 자식 정보-->
+    <!-- 중간 체크 -->
     <TextView
         android:id="@+id/t5"
         android:layout_below="@+id/r1"
@@ -109,7 +108,6 @@
         android:layout_height="wrap_content"
         android:text=" [ 질문에 성실히 임하고 있나요? ] "
         android:textColor="#000000" />
-
     <CheckBox
         android:layout_below="@+id/t5"
         android:id="@+id/check"
@@ -125,7 +123,6 @@
         android:layout_height="wrap_content"
         android:text=" [ 설문지 어플 평가 ]"
         android:textColor="#000000" />
-
     <RatingBar
         android:layout_below="@+id/t6"
         android:id="@+id/rating"
@@ -146,10 +143,11 @@
 
     <!-- 결과 -->
     <TextView
-        android:layout_below="@id/response"
+        android:layout_below="@id/btn_birth"
+        android:layout_alignParentRight="true"
         android:id="@+id/show"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text=" "
+        android:text=""
         android:textColor="#000000" />
 </RelativeLayout>
