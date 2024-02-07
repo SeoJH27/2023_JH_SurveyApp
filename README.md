@@ -28,3 +28,10 @@
 ### Java
 * Method
   * findViewById
+
+
+</br>
+
+## 실행 화면
+
+![image](https://github.com/SeoJH27/2023_JH_SurveyApp/assets/63250559/d75a9420-9cfd-4759-875d-02305f974aff)
